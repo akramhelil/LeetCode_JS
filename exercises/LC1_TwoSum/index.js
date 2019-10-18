@@ -11,15 +11,19 @@ function twoSum(arr, target) {
     const res = [];
 
     for (let i = 0; i < arr.length; i++) {
+        // save the each 
         const num = arr[i];
         const complement = target - num; 
 
         if (numsVisited[complement] !== undefined) {
             res.push(i)
+            // console.log(res)
+            console.log(numsVisited)
             res.push(numsVisited[complement])
         }
 
         numsVisited[num] = i;
+        console.log(numsVisited)
     }
     return res;
 }
